@@ -69,38 +69,40 @@ class _HomePageState extends State<HomePage> with CacheManager {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => KayitEkrani()));
-            },
-            child: Container(
-              height: 50,
-              width: 250,
-              color: Colors.deepPurple.shade200,
-              child: Center(child: Text("Kayıt Ol")),
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => KayitEkrani()));
+              },
+              child: Container(
+                height: 50,
+                width: 250,
+                color: Colors.deepPurple.shade200,
+                child: Center(child: Text("Kayıt Ol")),
+              ),
             ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => LoginEkrani()));
-            },
-            child: Container(
-              height: 50,
-              width: 250,
-              color: Colors.green.shade200,
-              child: Center(child: Text("Giriş Yap")),
+            SizedBox(
+              height: 20,
             ),
-          ),
-        ],
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LoginEkrani()));
+              },
+              child: Container(
+                height: 50,
+                width: 250,
+                color: Colors.green.shade200,
+                child: Center(child: Text("Giriş Yap")),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

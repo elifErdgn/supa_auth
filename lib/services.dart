@@ -34,7 +34,7 @@ class AuthServices {
     );
     final Session? session = response.session;
     if (session != null) {
-      CacheManager().saveToken(session.accessToken ?? 'token yok');
+      CacheManager().saveToken(session.accessToken);
       print("token" + session.accessToken );
 
     }
